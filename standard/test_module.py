@@ -3,10 +3,8 @@ import ddddocr
 import pytest
 from selenium.webdriver.common.by import By
 from StandardPage import StandardPageLogin, StandardPageHost
-import pytest_ordering
 
 url = "http://scc-standard.itg.it.org.test/itg-web-admin/#/login"
-
 filename = r"E:\各种学习资料\实习应聘\国贸实习\testGraph\image.png"
 
 
