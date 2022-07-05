@@ -1,4 +1,21 @@
+import ddddocr
 from poium import Page, Element
+from selenium.webdriver.common.by import By
+
+
+class Tool:
+    @classmethod
+    def get_graph(cls, driver, filename):
+        png = driver.find_element(By.XPATH, '//*[@id="main"]/div/div/form/div[4]/div/div/div[2]/img')
+        png.screenshot(filename)  # 将图片截屏并保存
+
+    @classmethod
+    def discern(cls, filename):
+        with open(filename, 'rb') as f:
+            im = f.read()
+        ocr = ddddocr.DdddOcr()
+        res = ocr.classification(im)
+        return res
 
 
 class StandardPageLogin(Page):
