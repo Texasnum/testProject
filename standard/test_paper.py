@@ -30,12 +30,9 @@ class TestPaper:
         cls.page.open(url)
         cls.page.set_window_size()
         cls.page.search_account = "500117"
-        cls.page.sleep(1)
         cls.page.search_password = "500117"
-        cls.page.sleep(1)
         get_graph()
         cls.page.search_certify = discern()
-        cls.page.sleep(1)
         cls.page.search_button.click()
         cls.page.sleep(2)
 
