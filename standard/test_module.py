@@ -45,17 +45,13 @@ class TestLogin:
         page.sleep(1)
         page.search_button.click()
         page.sleep(3)
-
         assert page.get_url == page_url
-        page.sleep(2)
 
         page = StandardPageHost(self.driver)
         page.search_setting.move_to_element()
         page.search_quit.click()
         page.sleep(2)
-
         assert page.get_url == url
-        page.sleep(2)
 
     @classmethod
     def teardown_class(cls):
@@ -63,4 +59,4 @@ class TestLogin:
 
 
 if __name__ == '__main__':
-    pytest.main(["TestLogin"])
+    pytest.main()
