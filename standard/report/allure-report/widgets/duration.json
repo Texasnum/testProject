@@ -1,0 +1,1 @@
+[{"uid":"dd27c522e960451","name":"test_login_and_quit[纸张]","time":{"start":1657176706533,"stop":1657176720496,"duration":13963},"status":"passed","severity":"normal"},{"uid":"5734d6948bcf005b","name":"test_login_and_quit[橡胶]","time":{"start":1657176692552,"stop":1657176706527,"duration":13975},"status":"passed","severity":"normal"}]

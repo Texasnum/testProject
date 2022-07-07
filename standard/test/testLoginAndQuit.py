@@ -1,3 +1,5 @@
+import os
+import allure
 from selenium import webdriver
 import pytest
 from standard.page.StandardPage import StandardPageLogin, StandardPageHost
@@ -20,6 +22,7 @@ class TestLoginAndQuit:
          ["500117", "500117", 'http://scc-standard.itg.it.org.test/itg-web-admin/#/workbench-manager']],
         ids=["橡胶", "纸张"]
     )
+    @allure.feature("测试登录和退出")
     def test_login_and_quit(self, account, password, page_url):
         self.loginPage.input_account(account)
         self.loginPage.input_password(password)
@@ -37,4 +40,6 @@ class TestLoginAndQuit:
 
 
 if __name__ == '__main__':
-    pytest.main()
+    # pytest.main()
+    pytest.main(['-s', 'testLoginAndQuit.py', '--clean-alluredir', '--alluredir=../report/allure-results'])
+    os.system(r"allure generate ../report/allure-results -o ../report/allure-report --clean")
